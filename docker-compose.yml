@@ -1,0 +1,24 @@
+services:
+
+  innoscripta-be:
+    container_name: innoscripta-be
+    build: .
+    volumes:
+      - ./backend:/var/www/html
+    ports:
+      - 9000:80
+  
+  mysql_db:
+    image: mysql:8.0.25
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: innoscripta
+    ports:
+    - 3306:3306
+  
+  phpmyadmin:
+    image: phpmyadmin:5.1
+    ports:
+      - 9001:80
+    environment:
+      - PMA_ARBITRARY=1
