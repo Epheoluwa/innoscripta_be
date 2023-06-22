@@ -17,16 +17,6 @@ easy-to-read format
 ```
 git clone git@github.com:Epheoluwa/innoscripta_be.git
 cd innoscripta_be
-cd backend
-```
-
-To setup the .env file
-```
-cp .env.example .env 
-make generate
-make clear
-add api key for NEWSORG_APIKEY and NYTIMES_APIKEY
-setup Database Configuration
 ```
 
 ## Run Project
@@ -42,6 +32,16 @@ To stop the container run the following command
 ```
 make stop 
 ```
+
+To setup the .env file
+```
+cp .env.example .env 
+make generate
+make clear
+add api key for NEWSORG_APIKEY and NYTIMES_APIKEY
+setup Database Configuration
+```
+
 To laravel migration you can run the following command
 ```
 make migration 
