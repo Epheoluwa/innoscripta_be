@@ -29,4 +29,5 @@ Route::middleware('auth:sanctum')->group(function () {
 
     Route::get('fetcharticles', [ArticleController::class,'fetchArticles']);
     Route::get('fetchsources', [PersonalizedController::class, 'fetchallSources']);
+    Route::post('postpersonalisedData', [PersonalizedController::class, 'postPersonalisedData']);
 });
