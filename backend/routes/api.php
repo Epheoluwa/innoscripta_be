@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Article\ArticleController;
 use App\Http\Controllers\Auth\AuthController;
+use App\Http\Controllers\Settings\PersonalizedController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -27,4 +28,5 @@ Route::middleware('auth:sanctum')->group(function () {
     Route::post('logout', [AuthController::class, 'logout']);
 
     Route::get('fetcharticles', [ArticleController::class,'fetchArticles']);
+    Route::get('fetchsources', [PersonalizedController::class, 'fetchallSources']);
 });
