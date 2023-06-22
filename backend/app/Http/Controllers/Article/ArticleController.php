@@ -2,10 +2,9 @@
 
 namespace App\Http\Controllers\Article;
 
-use App\Http\Controllers\Controller;
+
 use App\Http\Controllers\ResponseController;
 use Carbon\Carbon;
-use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Http;
 
