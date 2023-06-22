@@ -21,19 +21,9 @@ class ArticleController extends ResponseController
         $category = $request->category === 'null' ? '' : $request->category;
 
 
-        // return response()->json($from);
-        // exit;
-
-
         $this->fetchNewsOrg($search, $category);
         $this->fetchNewYorkTimes($search, $from, $to);
 
-        shuffle($this->allArticlesArray);
-
-        return response()->json($this->allArticlesArray);
-        exit;
-        $this->fetchNewYorkTimes($search, $from, $to);
-        $this->fetchNewsOrg($search, $category);
         shuffle($this->allArticlesArray);
 
         return response()->json($this->allArticlesArray);
