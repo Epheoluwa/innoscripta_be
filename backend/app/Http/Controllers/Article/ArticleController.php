@@ -67,7 +67,6 @@ class ArticleController extends ResponseController
     {
         try {
             $nytimes_Key = env('NYTIMES_APIKEY');
-
             $apiKey = "&api-key=$nytimes_Key";
             $fetch = Http::get("https://api.nytimes.com/svc/search/v2/articlesearch.json?q=$search&begin_date=$from&end_date=$to" . $apiKey);
 

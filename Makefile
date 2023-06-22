@@ -12,3 +12,7 @@ composer-update:
 	docker exec innoscripta-be bash -c "composer update"
 migration:
 	docker exec innoscripta-be bash -c "php artisan migrate"
+generate:
+	docker exec innoscripta-be bash -c "php artisan key:generate"
+clear:
+	docker exec innoscripta-be bash -c "php artisan cache:clear && php artisan config:clear"

@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Article\ArticleController;
 use App\Http\Controllers\Auth\AuthController;
+use App\Http\Controllers\New\NewsController;
 use App\Http\Controllers\Settings\PersonalizedController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
@@ -30,4 +31,6 @@ Route::middleware('auth:sanctum')->group(function () {
     Route::get('fetcharticles', [ArticleController::class,'fetchArticles']);
     Route::get('fetchsources', [PersonalizedController::class, 'fetchallSources']);
     Route::post('postpersonalisedData', [PersonalizedController::class, 'postPersonalisedData']);
+
+    Route::get('personalisednews', [NewsController::class, 'getNews']);
 });
